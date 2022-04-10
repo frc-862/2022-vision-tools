@@ -2,3 +2,10 @@
 *.jpg
 *.png
 *.csv
+
+# Ignore webpage files from wget
+*.css
+*.js
+*.html
+*.json
+*.ico

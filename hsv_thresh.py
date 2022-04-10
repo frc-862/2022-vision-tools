@@ -8,12 +8,17 @@ def nothing(x):
 # Get current dir
 base_path = os.getcwd()
 
+# Gives width and height of frame
+width = 640
+height = 480
 
 # Window name
 window_name = 'img'
 
 # Create a window
-cv2.namedWindow(window_name)
+cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
+
+# cv2.resizeWindow(window_name, width, height)
 
 # Create trackbars for color change
 # Hue is from 0-179 for Opencv
@@ -73,5 +78,7 @@ for my_path, my_subdirs, my_files in os.walk(base_path):
                 cv2.imshow(window_name, result)
                 if cv2.waitKey(10) & 0xFF == ord('q'):
                     break
+                elif cv2.waitKey(10) & 0xFF == ord('e'): # Right now you've got to hold this down to make it work
+                    exit()
 
 cv2.destroyAllWindows()
