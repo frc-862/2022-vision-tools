@@ -9,3 +9,6 @@
 *.html
 *.json
 *.ico
+
+# Ignore jupyter notebook checkpoints
+.ipynb_checkpoints/
